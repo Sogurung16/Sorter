@@ -2,7 +2,7 @@ package com.sparta.sonam.sortmanager.arraygenerator;
 
 import java.util.Random;
 
-public class GenerateArray {
+public class GenerateRandomArray {
     public static int[] generateRandomArray(int arrayLength){
         Random random = new Random();
 

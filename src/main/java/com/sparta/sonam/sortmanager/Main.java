@@ -1,6 +1,6 @@
 package com.sparta.sonam.sortmanager;
 
-import com.sparta.sonam.sortmanager.arraygenerator.GenerateArray;
+import com.sparta.sonam.sortmanager.arraygenerator.GenerateRandomArray;
 import com.sparta.sonam.sortmanager.sorters.SortFactory;
 import com.sparta.sonam.sortmanager.sorters.Sorter;
 import com.sparta.sonam.sortmanager.view.View;
@@ -32,7 +32,7 @@ public class Main {
         View.printChosenSorter(sortingAlgorithm);
 
         long start = System.nanoTime();
-        arrayToSort = GenerateArray.generateRandomArray(arrayLength);
+        arrayToSort = GenerateRandomArray.generateRandomArray(arrayLength);
         View.printUnsortedArray(arrayToSort);
 
         sortedArray = sortingAlgorithm.sortArray(arrayToSort);
