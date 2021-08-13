@@ -15,10 +15,6 @@ public class BinarySortTree implements Sorter {
         return getBST_SortedArray(arrayToSort);
     }
 
-    /* TODO(1): Insert data items from array into BST.
-    Root node
-    go left (child < parentNode)
-    go right (child >= parentNode)*/
     private void insertNodesIntoTree(int[] arrayToSort){
         final Node rootNode = new Node(arrayToSort[0]);
         for(int i = 0; i < arrayToSort.length; i++){
