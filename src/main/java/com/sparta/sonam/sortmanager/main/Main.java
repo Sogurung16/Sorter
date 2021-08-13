@@ -1,4 +1,4 @@
-package com.sparta.sonam.sortmanager;
+package com.sparta.sonam.sortmanager.main;
 
 import com.sparta.sonam.sortmanager.arraygenerator.GenerateRandomArray;
 import com.sparta.sonam.sortmanager.sorters.SortFactory;
