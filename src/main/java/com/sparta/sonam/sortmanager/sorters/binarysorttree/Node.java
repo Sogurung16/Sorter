@@ -1,23 +1,19 @@
 package com.sparta.sonam.sortmanager.sorters.binarysorttree;
 
 public class Node {
-    private int value, subTree;
+    private int value;
+    //private int subTree;
     private Node leftChild, rightChild;
+    //private boolean visited;
 
     Node(int value){
         this.value = value;
-        this. subTree = 0;
+        /*this.visited = false;
+        this.subTree = 0;*/
     }
 
     public int getValue() {
         return value;
-    }
-
-    public int getSubTree() {
-        return subTree;
-    }
-    public void setSubTree(int subTree) {
-        this.subTree = subTree;
     }
 
     public Node getLeftChild() {
@@ -40,4 +36,18 @@ public class Node {
     public boolean isRightChildEmpty(){
         return rightChild == null?true:false;
     }
+
+ /*   public boolean hasVisited() {
+        return visited;
+    }
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }*/
+
+    /*public int getSubTree() {
+        return subTree;
+    }
+    public void setSubTree(int subTree) {
+        this.subTree = subTree;
+    }*/
 }

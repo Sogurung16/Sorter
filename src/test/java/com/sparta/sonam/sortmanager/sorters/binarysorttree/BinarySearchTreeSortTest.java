@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 @Description("BinaryTreeSort the provided array")
-class BinarySortTreeTest {
+class BinarySearchTreeSortTest {
     @Test
     @Description("Returns a BinarySortedTree array for length 20")
     void binarySortTreeArrayTest(){
