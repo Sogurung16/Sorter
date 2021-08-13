@@ -10,8 +10,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Sorter sortingAlgorithm;
-        int[] arrayToSort;
+        int[] arrayToSort, sortedArray;
         int arrayLength,chosenSortingAlgorithm;
+
         do{
             View.printSortingOptions(SortFactory.getSortingOptions());
 
@@ -25,13 +26,20 @@ public class Main {
         }while(sortingAlgorithm==null);
 
         View.printArrayLengthStatement();
-
         Scanner inputArrLength = new Scanner(System.in);
         arrayLength = inputArrLength.nextInt();
+
+        View.printChosenSorter(sortingAlgorithm);
+
+        long start = System.nanoTime();
         arrayToSort = GenerateArray.generateRandomArray(arrayLength);
-
-
         View.printUnsortedArray(arrayToSort);
-        sortingAlgorithm.sortArray(arrayToSort);
+
+        sortedArray = sortingAlgorithm.sortArray(arrayToSort);
+        View.printSortedArray(sortedArray);
+        long finish = System.nanoTime();
+        long timeTaken = finish - start;
+
+        View.printTimeTaken(timeTaken, sortingAlgorithm);
     }
 }
