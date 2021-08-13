@@ -1,0 +1,4 @@
+com\sparta\sonam\sortmanager\sorters\SortFactoryTest.class
+com\sparta\sonam\sortmanager\arraygenerator\GenerateRandomArrayTest.class
+com\sparta\sonam\sortmanager\sorters\BinarySortTreeTest.class
+com\sparta\sonam\sortmanager\sorters\BubbleSortTest.class
