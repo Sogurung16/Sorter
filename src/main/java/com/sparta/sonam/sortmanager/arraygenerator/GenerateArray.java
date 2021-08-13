@@ -1,16 +1,8 @@
-package com.sparta.sonam.sortmanager;
+package com.sparta.sonam.sortmanager.arraygenerator;
 
 import java.util.Random;
 
-public class SortFactory {
-    public static Sorter getSortingAlgorithm(int sortAlgorithm){
-        return switch(sortAlgorithm){
-            case 1 -> new BubbleSort();
-            case 7 -> new BinaryTreeSort();
-            default -> null;
-        };
-    }
-
+public class GenerateArray {
     public static int[] generateRandomArray(int arrayLength){
         Random random = new Random();
 

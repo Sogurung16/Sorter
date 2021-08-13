@@ -1,5 +1,10 @@
 package com.sparta.sonam.sortmanager;
 
+import com.sparta.sonam.sortmanager.arraygenerator.GenerateArray;
+import com.sparta.sonam.sortmanager.sorters.SortFactory;
+import com.sparta.sonam.sortmanager.sorters.Sorter;
+import com.sparta.sonam.sortmanager.view.View;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,24 +12,26 @@ public class Main {
         Sorter sortingAlgorithm;
         int[] arrayToSort;
         int arrayLength,chosenSortingAlgorithm;
-
         do{
-            View.printSortingOptions();
+            View.printSortingOptions(SortFactory.getSortingOptions());
 
-            Scanner input = new Scanner(System.in);
-            chosenSortingAlgorithm = input.nextInt();
-
-            View.printArrayLengthStatement();
-
-            arrayLength = input.nextInt();
-            arrayToSort = SortFactory.generateRandomArray(arrayLength);
+            Scanner inputSorter = new Scanner(System.in);
+            chosenSortingAlgorithm = inputSorter.nextInt();
 
             sortingAlgorithm = SortFactory.getSortingAlgorithm(chosenSortingAlgorithm);
-            if(sortingAlgorithm==null) {
-                System.out.println("Wrong number provided. Please try again.");
+            if(!SortFactory.hasSortingOption(chosenSortingAlgorithm)) {
+                View.printIncorrectNumber();
             }
         }while(sortingAlgorithm==null);
-        View.printArray(arrayToSort);
+
+        View.printArrayLengthStatement();
+
+        Scanner inputArrLength = new Scanner(System.in);
+        arrayLength = inputArrLength.nextInt();
+        arrayToSort = GenerateArray.generateRandomArray(arrayLength);
+
+
+        View.printUnsortedArray(arrayToSort);
         sortingAlgorithm.sortArray(arrayToSort);
     }
 }
