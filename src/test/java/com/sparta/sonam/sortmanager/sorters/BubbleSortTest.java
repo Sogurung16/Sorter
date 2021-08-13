@@ -1,19 +1,16 @@
 package com.sparta.sonam.sortmanager.sorters;
 
-import com.sparta.sonam.sortmanager.arraygenerator.GenerateRandomArray;
-import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-@Description("Should BubbleSort the provided array in ascending order.")
+@DisplayName("Should BubbleSort the provided array in ascending order.")
 class BubbleSortTest {
 
-    @Test
-    @Description("Returns a BubbleSorted array of length 20")
+    @RepeatedTest(10)
+    @DisplayName("Returns a BubbleSorted array of length 20")
     void bubbleSortArrayTest() {
         int[] unsortedArray = new int[]{99,24,59,5,2,19,67,78};
 

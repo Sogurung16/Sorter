@@ -36,7 +36,7 @@ public class BinarySearchTree {
             } else {
                 addNodeIntoTree(node.getLeftChild(), value);
             }
-        }else if (value>node.getValue()){
+        }else if (value>=node.getValue()){
             if (node.isRightChildEmpty()){
                 node.setRightChild(new Node(value));
             } else{
