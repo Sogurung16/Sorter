@@ -1,8 +1,10 @@
+D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\main\Loader.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\BubbleSort.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\Sorter.java
-D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\bst\Node.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\view\View.java
+D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\binarysorttree\BinarySearchTree.java
+D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\binarysorttree\BinarySearchTreeSort.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\arraygenerator\GenerateRandomArray.java
-D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\bst\BinarySortTree.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\main\Main.java
 D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\SortFactory.java
+D:\SpartaGlobal\Course\SortManager\src\main\java\com\sparta\sonam\sortmanager\sorters\binarysorttree\Node.java
