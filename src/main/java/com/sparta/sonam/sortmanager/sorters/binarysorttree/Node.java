@@ -1,4 +1,4 @@
-package com.sparta.sonam.sortmanager.sorters.bst;
+package com.sparta.sonam.sortmanager.sorters.binarysorttree;
 
 public class Node {
     private int value, subTree;
@@ -32,5 +32,12 @@ public class Node {
     }
     public void setRightChild(Node rightChild) {
         this.rightChild = rightChild;
+    }
+
+    public boolean isLeftChildEmpty(){
+        return leftChild == null?true:false;
+    }
+    public boolean isRightChildEmpty(){
+        return rightChild == null?true:false;
     }
 }

@@ -1,4 +1,4 @@
-package com.sparta.sonam.sortmanager.sorters.bst;
+package com.sparta.sonam.sortmanager.sorters.binarysorttree;
 
 import com.sparta.sonam.sortmanager.sorters.Sorter;
 
@@ -21,6 +21,27 @@ public class BinarySortTree implements Sorter {
     go right (child >= parentNode)*/
     private void insertNodesIntoTree(int[] arrayToSort){
         final Node rootNode = new Node(arrayToSort[0]);
+        for(int i = 0; i < arrayToSort.length; i++){
+            addNodeIntoTree(rootNode, arrayToSort[i]);
+        }
+    }
+
+    private void addNodeIntoTree(Node node, int value){
+        if(value==node.getValue()) return;
+
+        if(value<node.getValue()){
+            if (node.isLeftChildEmpty()) {
+                node.setLeftChild(new Node(value));
+            } else {
+                addNodeIntoTree(node.getLeftChild(), value);
+            }
+        }else if (value>node.getValue()){
+            if (node.isRightChildEmpty()){
+                node.setRightChild(new Node(value));
+            } else{
+                addNodeIntoTree(node.getRightChild(), value);
+            }
+        }
     }
 
     /* TODO(2): Perform in-order traversal on the tree to get the elements in sorted order.
