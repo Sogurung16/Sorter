@@ -25,9 +25,14 @@ public class Loader {
             }
         }while(sortingAlgorithm==null);
 
-        View.printArrayLengthStatement();
-        Scanner inputArrLength = new Scanner(System.in);
-        arrayLength = inputArrLength.nextInt();
+        do{
+            View.printArrayLengthStatement();
+            Scanner inputArrLength = new Scanner(System.in);
+            arrayLength = inputArrLength.nextInt();
+            if(arrayLength <= 0){
+                View.printIncorrectNumber();
+            }
+        } while (arrayLength <=0);
 
         View.printChosenSorter(sortingAlgorithm);
 
