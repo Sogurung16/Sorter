@@ -6,11 +6,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-@DisplayName("BinaryTreeSort the provided array")
-class BinarySearchTreeSortTest {
+@DisplayName("Should BinaryTreeSort the provided array in ascending order")
+class BinarySearchTreeSortTest implements SortersTestInterface{
+    @Override
     @Test
     @DisplayName("Returns a BinarySortedTree array for length 20")
-    void binarySortTreeArrayTest(){
+    public void sortArrayTest() {
         int[] unsortedArray = new int[]{24,5,2,19,67,78,59,99};
 
         int[] expectedSortedArray = new int[]{2,5,19,24,59,67,78,99};
@@ -22,9 +23,10 @@ class BinarySearchTreeSortTest {
         Assertions.assertEquals(expectedArray, actualArray);
     }
 
+    @Override
     @Test
     @DisplayName("Returns a BinarySortedTree array for length 20. Test for value zero in array")
-    void binarySortTreeArrayWithZeroTest(){
+    public void sortArrayWithZeroTest(){
         int[] unsortedArray = new int[]{24,5,2,0,67,78,59,99};
 
         int[] expectedSortedArray = new int[]{0,2,5,24,59,67,78,99};
@@ -36,9 +38,10 @@ class BinarySearchTreeSortTest {
         Assertions.assertEquals(expectedArray, actualArray);
     }
 
+    @Override
     @Test
     @DisplayName("Returns a BinarySortedTree array for length 20. Test for negative values in array")
-    void binarySortTreeArrayWithNegativesTest(){
+    public void sortArrayWithNegativesTest(){
         int[] unsortedArray = new int[]{24,5,2,-67,78,-59,99};
 
         int[] expectedSortedArray = new int[]{-67,-59,2,5,24,78,99};
@@ -50,9 +53,10 @@ class BinarySearchTreeSortTest {
         Assertions.assertEquals(expectedArray, actualArray);
     }
 
+    @Override
     @Test
     @DisplayName("Returns a BinarySortedTree array for length 20. Test for repeated values in array")
-    void binarySortTreeArrayWithRepeatsTest(){
+    public void sortArrayWithRepeatsTest(){
         int[] unsortedArray = new int[]{19,5,2,67,19,67,19,99};
 
         int[] expectedSortedArray = new int[]{2,5,19,19,19,67,67,99};
