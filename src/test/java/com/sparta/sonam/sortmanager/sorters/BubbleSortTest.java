@@ -10,7 +10,7 @@ import java.util.Arrays;
 class BubbleSortTest implements SortersTestInterface{
     @Override
     @Test
-    @DisplayName("Returns a BubbleSorted array of length 20")
+    @DisplayName("Returns a BubbleSorted array.")
     public void sortArrayTest() {
         int[] unsortedArray = new int[]{99,24,59,5,2,19,67,78};
 
@@ -24,7 +24,7 @@ class BubbleSortTest implements SortersTestInterface{
     }
     @Override
     @Test
-    @DisplayName("Returns a BubbleSorted array for length 20. Test for value zero in array")
+    @DisplayName("Returns a BubbleSorted array. Test for value zero in array")
     public void sortArrayWithZeroTest(){
         int[] unsortedArray = new int[]{24,5,2,0,67,78,59,99};
 
@@ -39,11 +39,11 @@ class BubbleSortTest implements SortersTestInterface{
 
     @Override
     @Test
-    @DisplayName("Returns a BubbleSorted array for length 20. Test for negative values in array")
+    @DisplayName("Returns a BubbleSorted array. Test for negative values in array")
     public void sortArrayWithNegativesTest(){
-        int[] unsortedArray = new int[]{24,5,2,-67,78,-59,99};
+        int[] unsortedArray = new int[]{24,5,2,-67,78,-59,99,-40};
 
-        int[] expectedSortedArray = new int[]{-67,-59,2,5,24,78,99};
+        int[] expectedSortedArray = new int[]{-67,-59,-40,2,5,24,78,99};
         int[] actualSortedArray = SortFactory.getSortingAlgorithm(1).sortArray(unsortedArray);
 
         String expectedArray = Arrays.toString(expectedSortedArray);
@@ -54,11 +54,41 @@ class BubbleSortTest implements SortersTestInterface{
 
     @Override
     @Test
-    @DisplayName("Returns a BubbleSorted array for length 20. Test for repeated values in array")
+    @DisplayName("Returns a BubbleSorted array. Test for repeated values in array")
     public void sortArrayWithRepeatsTest(){
         int[] unsortedArray = new int[]{19,5,2,67,19,67,19,99};
 
         int[] expectedSortedArray = new int[]{2,5,19,19,19,67,67,99};
+        int[] actualSortedArray = SortFactory.getSortingAlgorithm(1).sortArray(unsortedArray);
+
+        String expectedArray = Arrays.toString(expectedSortedArray);
+        String actualArray = Arrays.toString(actualSortedArray);
+
+        Assertions.assertEquals(expectedArray, actualArray);
+    }
+
+    @Override
+    @Test
+    @DisplayName("Returns a BubbleSorted even size array of length 8")
+    public void sortArrayOfEvenSize(){
+        int[] unsortedArray = new int[]{24,5,2,19,67,78,59,99};
+
+        int[] expectedSortedArray = new int[]{2,5,19,24,59,67,78,99};
+        int[] actualSortedArray = SortFactory.getSortingAlgorithm(1).sortArray(unsortedArray);
+
+        String expectedArray = Arrays.toString(expectedSortedArray);
+        String actualArray = Arrays.toString(actualSortedArray);
+
+        Assertions.assertEquals(expectedArray, actualArray);
+    }
+
+    @Override
+    @Test
+    @DisplayName("Returns a BubbleSorted odd size array of length 7")
+    public void sortArrayOfOddSize(){
+        int[] unsortedArray = new int[]{24,5,2,19,67,78,59};
+
+        int[] expectedSortedArray = new int[]{2,5,19,24,59,67,78};
         int[] actualSortedArray = SortFactory.getSortingAlgorithm(1).sortArray(unsortedArray);
 
         String expectedArray = Arrays.toString(expectedSortedArray);

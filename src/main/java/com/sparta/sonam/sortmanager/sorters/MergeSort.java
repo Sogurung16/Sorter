@@ -20,14 +20,14 @@ public class MergeSort implements Sorter{
 
     private void mergeSort(int[] array , int left, int right){
         if(left<right){
-            int middle = (left + (right - 1))/2;
+            int middle = left + (right - left)/2;
             mergeSort(array, left, middle);
             mergeSort(array, middle+1, right);
             merge(array, left, middle, right);
         }
     }
 
-    private void merge(int[] array , int left, int middle,int right){
+    private void merge(int[] array , int left, int middle, int right){
         int leftArraySize = middle - left + 1;
         int rightArraySize = right - middle;
 
@@ -37,7 +37,7 @@ public class MergeSort implements Sorter{
         for(int i = 0; i< leftArray.length; i++){
             leftArray[i] = array[left + i];
         }
-        for(int i = 0; i< leftArray.length; i++){
+        for(int i = 0; i< rightArray.length; i++){
             rightArray[i] = array[middle+1+i];
         }
 

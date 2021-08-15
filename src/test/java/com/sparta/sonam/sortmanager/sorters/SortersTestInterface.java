@@ -5,4 +5,6 @@ public interface SortersTestInterface {
     void sortArrayWithZeroTest();
     void sortArrayWithNegativesTest();
     void sortArrayWithRepeatsTest();
+    void sortArrayOfEvenSize();
+    void sortArrayOfOddSize();
 }
