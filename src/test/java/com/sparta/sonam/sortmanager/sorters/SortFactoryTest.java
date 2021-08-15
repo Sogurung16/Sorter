@@ -32,7 +32,7 @@ class SortFactoryTest {
     @DisplayName("Correct sorting options displayed.")
     void getSortingOptions() {
         String[] sortingOptions = new String[] {
-                "BubbleSort", "BinaryTreeSort"
+                "BubbleSort", "InsertionSort", "MergeSort", "QuickSort", "SelectionSort", "BinaryTreeSort"
         };
         String actualSorters = Arrays.toString(sortingOptions);
         String expectedSorters = Arrays.toString(SortFactory.getSortingOptions());
