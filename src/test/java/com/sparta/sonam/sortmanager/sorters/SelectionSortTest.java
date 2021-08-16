@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
+@DisplayName("Should SelectionSort the provided array in ascending order")
 class SelectionSortTest implements SortersTestInterface{
     @Override
     @Test

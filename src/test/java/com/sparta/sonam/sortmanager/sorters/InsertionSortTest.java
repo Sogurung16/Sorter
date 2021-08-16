@@ -3,11 +3,9 @@ package com.sparta.sonam.sortmanager.sorters;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+@DisplayName("Should InsertionSort the provided array in ascending order")
 class InsertionSortTest implements SortersTestInterface{
     @Override
     @Test
