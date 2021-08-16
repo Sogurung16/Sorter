@@ -1,5 +1,6 @@
 package com.sparta.sonam.sortmanager.main;
 
+import com.sparta.sonam.sortmanager.SortersPerformance;
 import com.sparta.sonam.sortmanager.arraygenerator.GenerateRandomArray;
 import com.sparta.sonam.sortmanager.sorters.SortFactory;
 import com.sparta.sonam.sortmanager.sorters.Sorter;
@@ -46,5 +47,7 @@ public class Loader {
         long timeTaken = finish - start;
 
         View.printTimeTaken(timeTaken, sortingAlgorithm);
+
+        SortersPerformance.logPerformance();
     }
 }
