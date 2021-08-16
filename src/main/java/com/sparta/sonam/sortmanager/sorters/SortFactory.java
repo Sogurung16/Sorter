@@ -1,6 +1,5 @@
 package com.sparta.sonam.sortmanager.sorters;
 
-import com.sparta.sonam.sortmanager.sorters.binarysorttree.BinarySearchTree;
 import com.sparta.sonam.sortmanager.sorters.binarysorttree.BinarySearchTreeSort;
 
 public class SortFactory {
