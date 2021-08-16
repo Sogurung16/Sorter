@@ -9,7 +9,27 @@ public class InsertionSort implements Sorter{
 
     @Override
     public int[] sortArray(int[] arrayToSort) {
-        return new int[0];
+        return getInsertionSortedArray(arrayToSort);
+    }
+
+    private int[] getInsertionSortedArray(int[] arrayToSort){
+        insertionSort(arrayToSort);
+        int[] sortedArray = arrayToSort;
+        return sortedArray;
+    }
+
+    private void insertionSort(int[] arrayToSort){
+        for(int i = 0; i< arrayToSort.length; i++) {
+            int position = i;
+            for(int j = position; j>=0; j--){
+                if(arrayToSort[position] < arrayToSort[j]){
+                    int temp = arrayToSort[j];
+                    arrayToSort[j] = arrayToSort[position];
+                    arrayToSort[position] = temp;
+                    position--;
+                }
+            }
+        }
     }
 
     @Override
